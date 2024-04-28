@@ -16,8 +16,14 @@ Convert-SentinelARYamlToArm: Converts a YAML file into a valid ARM template.
 Both functions work in the same manner. You can input a file and use the "UseOriginalFilename" switch, which converts the content and saves the resulting file with the same filename but with the opposite extension. This simplifies the process of converting Microsoft Sentinel Analytics Rules between the two formats.
 
 Convert-SentinelARYamlToArm -Filename "C:\Users\User\Downloads\Azure_Sentinel_analytic_rule.yaml" -UseOriginalFilename
+
+
 Get-Content "C:\Users\User\Downloads\Azure_Sentinel_analytic_rule.yaml" | Convert-SentinelARYamlToArm -OutFile "C:\Users\User\Downloads\Azure_Sentinel_analytic_rule.json" (You can also input the contents using the pipeline and define the exact output location using the OutFile parameter.)
+
+
 Convert-SentinelARYamlToArm -Filename "C:\Users\User\Downloads\Azure_Sentinel_analytic_rule.yaml" (And if you don’t provide any output information it will return the converted file to the stdout.)
+
+
 
 Convert-SentinelARYamlToArm -Filename "C:\Users\User\Downloads\Azure_Sentinel_analytic_rule.yaml" -UseOriginalFilename
 
